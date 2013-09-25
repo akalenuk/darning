@@ -22,7 +22,7 @@
         (channels-enum (interval 0 (- channels 1))))
 
       (gimp-message "Darning...")
-      (gimp-image-undo-group-start image)
+      (gimp-image-undo-disable image)
   
       (map (lambda (i) (let* (
           (col_l (nth 1 (gimp-drawable-get-pixel drawable x1 i)))
@@ -46,7 +46,7 @@
         )) x1->x2)
       )) y1->y2)
       (gimp-drawable-update drawable x1 y1 (+ (- x2 x1 ) 1) (+ (- y2 y1 ) 1))
-      (gimp-image-undo-group-end image)
+      (gimp-image-undo-enable image)
       (gimp-displays-flush)
       (gimp-message "Darning done!")
     )
