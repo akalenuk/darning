@@ -8,3 +8,5 @@ GIMP script for cleaning pictures. It takes a background from a rectangular sele
 It is slow and doesn't support undo, so use at your own risk. 
 
 This script was built based on one of the features of my other project - the Unpager - https://github.com/akalenuk/unpager The Unpager can do darning not only for rectangular forms, but for any quadrilateral.
+
+There is also an explanation of how it works on wordsandbuttons.online: https://wordsandbuttons.online/image_darning.html
